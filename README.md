@@ -1,2 +1,3 @@
 # Money-Pipes
-Money Pipes: Explore careers, share jobs. A platform designed to educate and guide individuals on various career options and high-paying opportunities available in their region, at the time .
+This is just the bakend flask code.
+entire website is availabe here- https://naitikmundra18.pythonanywhere.com
