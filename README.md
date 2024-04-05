@@ -12,4 +12,4 @@ In terminal or comand prompt do:
 `pip install flask`
 Also make sure you have python installed.
 
-If you are still unable to run, You can chek the basic html//css frontend code in the Basic front end folder
+If you are still unable to run, You can chek the basic html//css frontend code in the Templates folder or simply check functionality at  https://naitikmundra18.pythonanywhere.com
