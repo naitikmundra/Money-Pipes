@@ -8,7 +8,7 @@ This website runs on a flask server hosted locally, just execute **main.py** fil
 [![](https://i.ibb.co/vJQyLvR/Capture.png)](https://i.ibb.co/vJQyLvR/Capture.png)
 
 **GETTING AN ERROR LIKE THIS ON WEBSITE - JUST RELOAD THE PAGE 2-3 TIMES**
-[![](https://i.ibb.co/19XYR3Y/Capture34.png)](https://i.ibb.co/19XYR3Y/Capture34.png)
+[![](https://i.ibb.co/19XYR3Y/Capture34.png)]
 [![](https://ibb.co/JzpWrNW])]https://i.ibb.co/19XYR3Y/Capture34.png[/img][/url]
 
 **THE MAIN.PY FILE REQUIRES FLASK TO RUN**
