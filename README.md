@@ -1,6 +1,6 @@
 # Money-Pipes
 This is  the backend flask code in main.py and the front end code in Templates folder.
-entire website is hosted/availabe here- https://naitikmundra18.pythonanywhere.com
+entire website is hosted/availabe here- https://naitikmundra18.pythonanywhere.com (it might be a bit slow to load, hosted on a testing platform.)
 
 # How to run the website?
 
