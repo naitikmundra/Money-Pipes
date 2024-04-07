@@ -69,9 +69,15 @@ In main.py file
 `
 
 CHANGE THIS LINE ACCORDING TO YOURN NEEDS 
+
 **root**  to **your mysql username**
-after 
-**:passwordhere** leave blank after **:** for **no password** 
+
+after: add the password 
+
+**:passwordhere** 
+
+if **no password** leave blank after **:** 
+
 leave **`@localhost/moneypipes` the same**
 
 If you are still unable to run, You can chek the basic html//css frontend code in the Templates folder or simply check functionality at  https://naitikmundra18.pythonanywhere.com
