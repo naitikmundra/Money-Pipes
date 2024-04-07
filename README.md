@@ -15,7 +15,8 @@ This website runs on a flask server hosted locally, just execute **main.py** fil
 In terminal or comand prompt do:
 `pip install flask`
 In mysql terminal do:
-`CREATE DATABASE IF NOT EXISTS moneypipes;
+```
+CREATE DATABASE IF NOT EXISTS moneypipes;
 
 USE moneypipes;
 
@@ -57,7 +58,7 @@ CREATE TABLE Comments (
     type INT,
     postid INT
 );
-`
+```
 Also make sure you have python installed.
 
 If you are still unable to run, You can chek the basic html//css frontend code in the Templates folder or simply check functionality at  https://naitikmundra18.pythonanywhere.com
