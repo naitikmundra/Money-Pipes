@@ -17,7 +17,7 @@ def index():
     mail.send(msg)
     return "Sent"
 '''
-your_country_name = "Add your country's name here in main.py"
+your_country_name = "Add your country's name here in main.py cause cant detect country on local server"
 
 from flask import Flask, render_template,request,redirect,session,jsonify
 from flask_sqlalchemy import SQLAlchemy
