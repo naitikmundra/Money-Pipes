@@ -1,7 +1,6 @@
 from flask import Flask, render_template,request,redirect,session,jsonify
 from flask_sqlalchemy import SQLAlchemy
 import requests
-import geoip2.database
 import json
 import ipinfo
 import sys
@@ -80,7 +79,7 @@ def inject_global_variables():
     handler = ipinfo.getHandler(access_token)
     ip_address = request.headers.get('X-Forwarded-For', request.remote_addr)
     details = handler.getDetails(ip_address)
-    country_name =  "India" #details.Country
+    country_name =  "India" #details.Country Only works on hosted websites as public ip is required.
     currency = get_currency_symbol(country_name)
     return dict(global_variable=global_variable,pipes=pipes,email=email,city=country_name,currency=currency)
 
