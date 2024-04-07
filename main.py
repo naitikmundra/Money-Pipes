@@ -17,6 +17,7 @@ def index():
     mail.send(msg)
     return "Sent"
 '''
+your_country_name = "Add your country's name here in main.py"
 
 from flask import Flask, render_template,request,redirect,session,jsonify
 from flask_sqlalchemy import SQLAlchemy
@@ -90,7 +91,6 @@ def login_check():
 
 @app.context_processor
 def inject_global_variables():
-    pipes = Pipes.query.all()
     global_variable = login_check()
     email = None
     if global_variable:
@@ -99,7 +99,9 @@ def inject_global_variables():
     handler = ipinfo.getHandler(access_token)
     ip_address = request.headers.get('X-Forwarded-For', request.remote_addr)
     details = handler.getDetails(ip_address)
-    country_name =  "India" #details.Country Only works on hosted websites as public ip is required.
+    country_name =  your_country_name #details.Country Only works on hosted websites as public ip is required.
+    pipes = Pipes.query.filter_by(country=country_name).all()
+
     currency = get_currency_symbol(country_name)
     return dict(global_variable=global_variable,pipes=pipes,email=email,city=country_name,currency=currency)
 
