@@ -66,5 +66,5 @@ Also make sure you have python installed.
 In main.py file
 `app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:@localhost/moneypipes'
 `
-CHANGE THIS LINE ACCORDING TO YOURN NEEDS root  to your mysql username after :passwordhere leve blank after: for no password leave `@localhost/moneypipes` the same
+CHANGE THIS LINE ACCORDING TO YOURN NEEDS **root**  to **your mysql username** after **:passwordhere** leave blank after **:** for **no password** leave **`@localhost/moneypipes` the same**
 If you are still unable to run, You can chek the basic html//css frontend code in the Templates folder or simply check functionality at  https://naitikmundra18.pythonanywhere.com
