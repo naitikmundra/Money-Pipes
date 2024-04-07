@@ -258,6 +258,7 @@ def get_replies():
                 comment_dict = {
                     "id": comment.id,
                     "content": comment.content,
+                    "fullname":comment.fullname
                     # Add other attributes as needed
                 }
                 comments_list.append(comment_dict)
