@@ -13,7 +13,7 @@ This website runs on a flask server hosted locally, just execute **main.py** fil
 
 **THE MAIN.PY FILE REQUIRES FLASK and MYSQL DB TABLES TO RUN**
 In terminal or comand prompt do:
-`pip install flask`
+`pip install flask Flask-SQLAlchemy mysqlclient`
 In mysql terminal do:
 ```
 CREATE DATABASE IF NOT EXISTS moneypipes;
