@@ -2,13 +2,14 @@
 This is  the backend flask code in main.py and the front end code in Templates folder.
 entire website is hosted/availabe here- https://naitikmundra18.pythonanywhere.com (it might be a bit slow to load, hosted on a testing platform.)
 
+**GETTING AN ERROR LIKE THIS ON WEBSITE - JUST RELOAD THE PAGE 2-3 TIMES**
+[![](https://i.ibb.co/19XYR3Y/Capture34.png)]
+
 # How to run the website?
 
 This website runs on a flask server hosted locally, just execute **main.py** file and open the highlighted link that includes your ip address in the browser 
 [![](https://i.ibb.co/vJQyLvR/Capture.png)]
 
-**GETTING AN ERROR LIKE THIS ON WEBSITE - JUST RELOAD THE PAGE 2-3 TIMES**
-[![](https://i.ibb.co/19XYR3Y/Capture34.png)]
 
 
 **THE MAIN.PY FILE REQUIRES FLASK and MYSQL DB TABLES TO RUN**
