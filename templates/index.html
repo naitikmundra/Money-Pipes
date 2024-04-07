@@ -128,8 +128,7 @@
           padding-bottom: 0!important;
         }
         .bg-image {
-                     {% if pipes == None %}
-
+{% if not pipes %}
           height: 100%;
           {% endif %}
     background-image: url("{{ url_for('static', filename='img/bg.png') }}"); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
