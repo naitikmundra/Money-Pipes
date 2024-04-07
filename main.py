@@ -1,3 +1,23 @@
+#EMAIL VERIFICATION IMPLEMENTATION NOT DONE AS IT WILL REQ. TO SHARE PASSWORD
+
+'''
+app.config['MAIL_SERVER'] = 'sandbox.smtp.mailtrap.io'
+app.config['MAIL_PORT'] = 2525
+app.config['MAIL_USERNAME'] = 'email@email.com'
+app.config['MAIL_PASSWORD'] = '1234'
+app.config['MAIL_USE_TLS'] = True
+app.config['MAIL_USE_SSL'] = False
+mail = Mail(app)
+
+
+@app.route("/")
+def index():
+    msg = Message(subject='MoneyPipes Verification', sender='verify@moneypipes.com', recipients=[user_email])
+    msg.body = "Your MoneyPipes verification code is {random.code}"
+    mail.send(msg)
+    return "Sent"
+'''
+
 from flask import Flask, render_template,request,redirect,session,jsonify
 from flask_sqlalchemy import SQLAlchemy
 import requests
