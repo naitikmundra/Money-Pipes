@@ -69,7 +69,7 @@ In main.py file
 `app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:@localhost/moneypipes'
 `
 
-CHANGE THIS LINE ACCORDING TO YOURN NEEDS 
+CHANGE THIS LINE ACCORDING TO YOUR NEEDS 
 
 **root**  to **your mysql username**
 
