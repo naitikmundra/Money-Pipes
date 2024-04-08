@@ -17,7 +17,7 @@ def index():
     mail.send(msg)
     return "Sent"
 '''
-your_country_name = "Add your country's name here in main.py cause cant detect country on local server"
+your_country_name = "India"
 
 from flask import Flask, render_template,request,redirect,session,jsonify
 from flask_sqlalchemy import SQLAlchemy
@@ -99,14 +99,17 @@ def inject_global_variables():
     handler = ipinfo.getHandler(access_token)
     ip_address = request.headers.get('X-Forwarded-For', request.remote_addr)
     details = handler.getDetails(ip_address)
-    country_name =  your_country_name #details.Country Only works on hosted websites as public ip is required.
-    pipes = Pipes.query.filter_by(country=country_name).all()
+    if not 'country' in session:
+        country_name =  your_country_name #details.Country Only works on hosted websites as public ip is required.
+        session["country"] = country_name
+    pipes = Pipes.query.filter_by(country=session["country"]).all()
 
-    currency = get_currency_symbol(country_name)
-    return dict(global_variable=global_variable,pipes=pipes,email=email,city=country_name,currency=currency)
+    currency = get_currency_symbol(session["country"])
+    return dict(global_variable=global_variable,pipes=pipes,email=email,city=session["country"],currency=currency)
 
 @app.route("/")
 def index():
+    
     return render_template("index.html")
 @app.route("/post_data", methods=['POST','GET'])
 def postdata():
@@ -209,6 +212,12 @@ def edit(pipeid):
             return redirect('/')
         return render_template("edit.html",epipe=epipe)
     return redirect('/login')
+@app.route('/upcountry', methods=['POST'])
+def updatecountry():
+    if request.method == "POST":
+        country = request.form['country']
+        session["country"] = country
+        return redirect ('/')
 @app.route('/add-user', methods=['POST'])
 def add_user():
     
@@ -248,7 +257,7 @@ def add_comment():
             db.session.commit()
             return "LOGGED"
     else:
-        return "LOGGED"
+        return redirect ('/login')
 @app.route('/get-replies', methods=['POST','GET'])
 def get_replies():
         if request.method == 'POST':
