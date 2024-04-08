@@ -25,6 +25,8 @@ import requests
 import json
 import ipinfo
 import sys
+from sqlalchemy import *
+
 app = Flask(__name__)
 app.secret_key = 'safekeyforgithub'  # Change this to a secure secret key
 
