@@ -81,5 +81,7 @@ if **no password** leave blank after **:**
 
 leave **`@localhost/moneypipes` the same**
 
-Also on top of main.py file edit the your_country_name var to your country's name since that cant be detected on a local server but it will be on the public hosted website - https://naitikmundra18.pythonanywhere.com. 
+# Additional Notes
+
+AUTO COUNTRY DETECTION WORKS ONLY WITH PUBLICALLY HOSTED WEBSITE - https://naitikmundra18.pythonanywhere.com. 
 If you are still unable to run, You can chek the basic html//css frontend code in the Templates folder or simply check functionality at  https://naitikmundra18.pythonanywhere.com
