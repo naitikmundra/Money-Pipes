@@ -172,7 +172,7 @@ def login():
                 session.permanent = True 
                 return redirect('/')
             else:
-                message = "No account found"
+                message = "No account found / Incorrect password"
         return render_template("login.html",error=message)
    
     return redirect('/')

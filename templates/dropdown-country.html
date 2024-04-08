@@ -1,6 +1,4 @@
-                {% if not epipe %}
-
-            <select id="country" name="country" class="form-control">
+ {% if not request.path.startswith("/edit/") %}            <select id="country" name="country" class="form-control">
                 <option value="{{city}}" selected>{{city}}</option>
             	{% endif %}
 
