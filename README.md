@@ -13,7 +13,7 @@ This website runs on a flask server hosted locally, just execute **main.py** fil
 
 
 
-**THE MAIN.PY FILE REQUIRES FLASK and MYSQL DB TABLES TO RUN AND A PRE-SETUP MYSQL SERVER WITH username and password known**
+**THE MAIN.PY FILE REQUIRES FLASK and MYSQL DB TABLES TO RUN AND A PRE-SETUP MYSQL SERVER WITH username and password known.**
 In terminal or comand prompt do:
 
 ```pip install flask Flask-SQLAlchemy mysqlclient ipinfo```
