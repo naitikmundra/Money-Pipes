@@ -65,7 +65,7 @@ CREATE TABLE Comments (
 ```
 Also make sure you have python installed.
 
-In main.py file
+In main.py file line no. 31
 `app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:@localhost/moneypipes'
 `
 
