@@ -8,6 +8,8 @@ entire website is hosted/availabe here- https://naitikmundra18.pythonanywhere.co
 # How to run the website locally?
 First clone the repository to a local folder.
 
+Also make sure you have **python** installed.
+
 This website runs on a flask server hosted locally, just execute **main.py** file and open the highlighted link that includes your ip address in the browser 
 [![](https://i.ibb.co/vJQyLvR/Capture.png)]
 
@@ -64,7 +66,6 @@ CREATE TABLE Comments (
     postid INT
 );
 ```
-Also make sure you have python installed.
 
 In main.py file line no. 31
 `app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:@localhost/moneypipes'
