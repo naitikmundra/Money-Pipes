@@ -5,7 +5,8 @@ entire website is hosted/availabe here- https://naitikmundra18.pythonanywhere.co
 **GETTING AN ERROR LIKE THIS ON WEBSITE - JUST RELOAD THE PAGE 2-3 TIMES**
 [![](https://i.ibb.co/19XYR3Y/Capture34.png)]
 
-# How to run the website?
+# How to run the website locally?
+First clone the repository to a local folder.
 
 This website runs on a flask server hosted locally, just execute **main.py** file and open the highlighted link that includes your ip address in the browser 
 [![](https://i.ibb.co/vJQyLvR/Capture.png)]
