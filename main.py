@@ -106,7 +106,20 @@ def inject_global_variables():
 
     currency = get_currency_symbol(session["country"])
     return dict(global_variable=global_variable,pipes=pipes,email=email,city=session["country"],currency=currency)
-
+@app.route("/search",methods=['POST','GET'])
+def search():
+    if request.method == "POST":
+        cgory = request.form["jobs"]
+        text = request.form["search"]
+    else:
+        return redirect ('/')
+    if cgory == "None":
+         pipes = Pipes.query.filter_by(country=session["country"]).filter(or_(Pipes.title.ilike(f"%{text}%"), Pipes.content.ilike(f"%{text}%"))).all()
+    elif text == "None":
+         pipes = Pipes.query.filter_by(country=session["country"],category = cgory).all()
+    else:
+         pipes = Pipes.query.filter_by(country=session["country"],category = cgory).filter(or_(Pipes.title.ilike(f"%{text}%"), Pipes.content.ilike(f"%{text}%"))).all()
+    return render_template("index.html",pipes = pipes)
 @app.route("/")
 def index():
     

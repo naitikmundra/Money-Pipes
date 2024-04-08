@@ -1,7 +1,9 @@
-        {% if not epipe %}
+ {% if not request.path.startswith("/edit/") %}  
 
 <select id="jobs" name="jobs" class="form-control">
+	<option value="None"  selected>Category ⌄</option>
 {% endif %}
+
                 <option value="Computer">Computer</option>
                 <option value="Electronics">Electronics</option>
                 <option value="Defense">Defense</option>
