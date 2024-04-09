@@ -19,6 +19,8 @@
     </div>
 
   </header>
+   {% if not request.path.startswith("/edit/") %}  
+
   <header class="mb-1">
 <div>
   <nav class="nav nav-masthead justify-content-center float-md-end">
@@ -52,3 +54,4 @@
     </div>
   </div>
   </header>
+  {% endif %}
