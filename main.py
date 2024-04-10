@@ -87,6 +87,7 @@ def inject_global_variables():
         country_name =  your_country_name #details.Country Only works on hosted websites as public ip is required.
         session["country"] = country_name
     pipes = Pipes.query.filter_by(country=session["country"]).all()
+    mylikes = Likes.query.filter_by(email=session["email"]).all()
 
     currency = get_currency_symbol(session["country"])
     return dict(global_variable=global_variable,pipes=pipes,email=email,city=session["country"],currency=currency)

@@ -167,10 +167,8 @@
             </a>
 
     <div style="text-align: left!important; margin-bottom: 20px;">
-      <!--
     <button class="btn btn-primary rounded-circle" onclick="sendData('{{ pipe.id }}','like')">  <i id="btnlike{{pipe.id}}" class="bi bi-hand-thumbs-up"></i>  </button>
 <button  class="btn btn-primary rounded-circle" onclick="sendData('{{ pipe.id }}','dislike')">  <i id="btndislike{{pipe.id}}" class="bi bi-hand-thumbs-down"></i>  </button>
--->
 </div>
       </div>
       <div class="col-md-6">
@@ -209,17 +207,30 @@
     })
     .then(response => {
         if (response.ok) {
+
           var element = document.getElementById("btn"+pressed+postid);
           if (element.className == "bi bi-hand-thumbs-up"){
                        element.classList.remove('bi-hand-thumbs-up');
             element.classList.add('bi-hand-thumbs-up-fill');
+            var element2 = document.getElementById("btn"+"dislike"+postid);
+            if (element2.className == "bi bi-hand-thumbs-down-fill"){
+              element2.classList.remove('bi-hand-thumbs-down-fill');
+              element2.classList.add('bi-hand-thumbs-down');
+
+            }
 
           }
                     if (element.className == "bi bi-hand-thumbs-down"){
                        element.classList.remove('bi-hand-thumbs-down');
             element.classList.add('bi-hand-thumbs-down-fill');
+            var element3 = document.getElementById("btn"+"like"+postid);
+            if (element3.className == "bi bi-hand-thumbs-up-fill"){
+              element3.classList.remove('bi-hand-thumbs-up-fill');
+              element3.classList.add('bi-hand-thumbs-up');
 
+            }
           }
+
         }
         //throw new Error('Network response was not ok.');
     })
