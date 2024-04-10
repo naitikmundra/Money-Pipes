@@ -10,7 +10,7 @@ import sys
 from sqlalchemy import *
 
 app = Flask(__name__)
-app.secret_key = 'safekeyforgithub'  # Change this to a secure secret key
+app.secret_key = 'safekeyforgithub'  
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:@localhost/moneypipes'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False  # Disable modification tracking
@@ -272,6 +272,9 @@ def get_replies():
                 }
                 comments_list.append(comment_dict)
             return jsonify(comments_list)
+@app.route('/notify', methods=['POST','GET'])
+def notify():
+    return "When someone new comments on your pipe you will not be notified as email feature cant be implemented here, as it will req. to share email password which can only be done in secure non shared production enviornment. More details in bottom of main.py file. <a href='/'>Head back home</a>"
 @app.route('/add-pipe', methods=['POST','GET'])
 def add_pipe():
     if login_check():
@@ -306,6 +309,7 @@ def add_pipe():
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
 #EMAIL VERIFICATION IMPLEMENTATION NOT DONE AS IT WILL REQ. TO SHARE PASSWORD
+#due to that no verification of email on registeration and no notification on new comments
 
 '''
 app.config['MAIL_SERVER'] = 'sandbox.smtp.mailtrap.io'
