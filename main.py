@@ -22,8 +22,8 @@ class User(db.Model):
     email = db.Column(db.String(100), primary_key=True)
     password = db.Column(db.String(100), nullable=False)
 class Likes(db.Model):
-    email = db.Column(db.String(100), primary_key=True)
-    postid = db.Column(db.Integer)
+    email = db.Column(db.String(100))
+    postid = db.Column(db.Integer, primary_key = True)
 class Dislikes(db.Model):
     email = db.Column(db.String(100), primary_key=True)
     postid = db.Column(db.Integer)
@@ -87,10 +87,10 @@ def inject_global_variables():
         country_name =  your_country_name #details.Country Only works on hosted websites as public ip is required.
         session["country"] = country_name
     pipes = Pipes.query.filter_by(country=session["country"]).all()
-    mylikes = Likes.query.filter_by(email=session["email"]).all()
 
     currency = get_currency_symbol(session["country"])
     return dict(global_variable=global_variable,pipes=pipes,email=email,city=session["country"],currency=currency)
+
 @app.route("/search",methods=['POST','GET'])
 def search():
     if request.method == "POST":
@@ -119,8 +119,7 @@ def postdata():
             
             check = Likes.query.filter_by(email=data["email"], postid=data["postid"]).first()
             if check:
-                pipe.likes -=1
-                db.session.delete(check)
+                pass
             else:
                 pipe.likes +=1
                 new_q = Likes(email=data["email"],postid=data["postid"])
@@ -130,16 +129,18 @@ def postdata():
              
         else:
             check = Dislikes.query.filter_by(email=data["email"], postid=data["postid"]).first()
-            if check:
-                pipe.dislikes -=1
-                db.session.delete(check)
-            else:
-                pipe.dislikes +=1
+            check2 = Likes.query.filter_by(email=data["email"], postid=data["postid"]).first()
 
-                new_q = Dislikes(email=data["email"],postid=data["postid"])
 
-                # Add the new user to the database
-                db.session.add(new_q)    
+            if check2:
+                    pipe.dislikes -=1
+                    db.session.delete(check2)                    
+            pipe.dislikes +=1
+
+            new_q = Dislikes(email=data["email"],postid=data["postid"])
+
+            # Add the new user to the database
+            db.session.add(new_q)    
         db.session.commit()
     return "GOOD"
 @app.route("/post/<id>")
@@ -147,6 +148,10 @@ def post(id):
     epipe = Pipes.query.filter_by(id = id).first()
     ecomments = Comments.query.filter_by(postid = id,type=None).all()
     return render_template("post.html",epipe=epipe,ecomments=ecomments)
+
+@app.errorhandler(500)
+def pageNotFound(error):
+    return "The mysql server goes on rest to limit test hosting charges. Try reloading(Ctrl+R) a few times it will work."
 
 @app.route("/about")
 def about():
@@ -174,6 +179,17 @@ def login():
         return render_template("login.html",error=message)
    
     return redirect('/')
+@app.route("/liked")
+def liked():
+    if login_check():
+        mylikes = Likes.query.filter_by(email=session["email"]).all()
+        pipeids = [like.postid for like in mylikes]
+        mylikes = Pipes.query.filter(Pipes.id.in_(pipeids)).all()
+        return render_template("index.html", pipes=mylikes)
+
+
+    else:
+        return redirect ('/')
 @app.route("/logout")
 def logout():
     session.clear()
