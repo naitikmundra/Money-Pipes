@@ -69,7 +69,7 @@ CREATE TABLE Comments (
 );
 ```
 
-In main.py file line no. 31
+In main.py file line no. 15
 `app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:@localhost/moneypipes'
 `
 
