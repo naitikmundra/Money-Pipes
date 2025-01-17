@@ -1,6 +1,5 @@
 # Money-Pipes
 This is  the backend flask code in main.py and the front end code in Templates folder.
-entire website is hosted/availabe here- https://naitikmundra18.pythonanywhere.com (it might be a bit slow to load, hosted on a testing platform.)
 
 **GETTING AN ERROR LIKE THIS ON WEBSITE - JUST RELOAD THE PAGE 2-3 TIMES**
 [![](https://i.ibb.co/19XYR3Y/Capture34.png)]
@@ -87,5 +86,5 @@ leave **`@localhost/moneypipes` the same**
 
 # Additional Notes
 
-AUTO COUNTRY DETECTION WORKS ONLY WITH PUBLICALLY HOSTED WEBSITE - https://naitikmundra18.pythonanywhere.com. 
+AUTO COUNTRY DETECTION WORKS ONLY WITH HOSTED WEBSITE
 If you are still unable to run, You can chek the basic html//css frontend code in the Templates folder or simply check functionality at  https://naitikmundra18.pythonanywhere.com
