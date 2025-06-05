@@ -5,7 +5,11 @@
 - **Written** - Python Flask
 - **Db**      - Mysql
 - **Front**   - html/css/js (jquery)
+![Untitled design](https://github.com/user-attachments/assets/a5e33903-8d98-4fd5-b80f-86d1c36be41b)
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/a5e33903-8d98-4fd5-b80f-86d1c36be41b">
+</p>
 
 ## How to run the website locally?
 First clone the repository to a local folder.
