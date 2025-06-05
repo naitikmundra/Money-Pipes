@@ -1,8 +1,12 @@
 # Money-Pipes
-This is  the backend flask code in main.py and the front end code in Templates folder.
 
-**GETTING AN ERROR LIKE THIS ON WEBSITE - JUST RELOAD THE PAGE 2-3 TIMES**
-[![](https://i.ibb.co/19XYR3Y/Capture34.png)]
+[Watch on YouTube](https://www.youtube.com/watch?v=VIDEO_ID)
+
+
+Written - Python Flask
+Db      - Mysql
+Front   - html/css/js (jquery)
+
 
 # How to run the website locally?
 First clone the repository to a local folder.
@@ -84,7 +88,6 @@ if **no password** leave blank after **:**
 
 leave **`@localhost/moneypipes` the same**
 
-# Additional Notes
+## Author
 
-AUTO COUNTRY DETECTION WORKS ONLY WITH HOSTED WEBSITE
-If you are still unable to run, You can chek the basic html//css frontend code in the Templates folder or simply check functionality at  https://naitikmundra18.pythonanywhere.com
+A website designed and written in code by Naitik Mundra 
