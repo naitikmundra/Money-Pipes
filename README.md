@@ -1,6 +1,6 @@
 # Money-Pipes
 
-[Watch on YouTube](https://www.youtube.com/watch?v=VIDEO_ID)
+[![Video Title](https://img.youtube.com/vi/NFFfPB0xzLA/0.jpg)](https://www.youtube.com/watch?v=NFFfPB0xzLA)
 
 
 Written - Python Flask
