@@ -7,7 +7,7 @@
 - **Front**   - html/css/js (jquery)
 
 
-# How to run the website locally?
+## How to run the website locally?
 First clone the repository to a local folder.
 
 Also make sure you have **python** installed.
