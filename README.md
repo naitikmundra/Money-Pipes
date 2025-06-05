@@ -16,7 +16,7 @@ Execute **main.py** file and open the highlighted link that includes your ip add
 [![](https://i.ibb.co/vJQyLvR/Capture.png)]
 
 
-## Database Setup
+### Database Setup
 **THE MAIN.PY FILE REQUIRES FLASK and MYSQL DB TABLES TO RUN AND A PRE-SETUP MYSQL SERVER (you can download and install xampp) WITH username and password known.**
 Download xampp here - https://www.apachefriends.org/
 
