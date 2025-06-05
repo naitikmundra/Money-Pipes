@@ -5,6 +5,7 @@
 - **Written** - Python Flask
 - **Db**      - Mysql
 - **Front**   - html/css/js (jquery)
+  
 ![Untitled design](https://github.com/user-attachments/assets/a5e33903-8d98-4fd5-b80f-86d1c36be41b)
 
 
