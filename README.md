@@ -12,11 +12,11 @@ First clone the repository to a local folder.
 
 Also make sure you have **python** installed.
 
-This website runs on a flask server hosted locally, just execute **main.py** file and open the highlighted link that includes your ip address in the browser 
+Execute **main.py** file and open the highlighted link that includes your ip address in the browser.
 [![](https://i.ibb.co/vJQyLvR/Capture.png)]
 
 
-
+## Database Setup
 **THE MAIN.PY FILE REQUIRES FLASK and MYSQL DB TABLES TO RUN AND A PRE-SETUP MYSQL SERVER (you can download and install xampp) WITH username and password known.**
 Download xampp here - https://www.apachefriends.org/
 
